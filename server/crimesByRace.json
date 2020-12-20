@@ -1,0 +1,106 @@
+{
+    "allCrimes": [
+        {
+            "race": "White",
+            "crimes": [
+                {
+                    "name": "Aggravated Assault",
+                    "value": 237960
+                },
+                {
+                    "name": "Robbery",
+                    "value":117080
+                },
+                {
+                    "name": "Larceny",
+                    "value":539390
+                },
+                {
+                    "name": "Motor Vehicle Theft",
+                    "value": 54500
+                },
+                {
+                    "name": "Arson",
+                    "value": 6420
+                },
+                {
+                    "name": "Property Crime",
+                    "value": 717390
+                },
+                {
+                    "name": "Violent Crime",
+                    "value": 276310
+                },{
+                    "name": "Offenses",
+                    "value": 7014550
+                },{
+                    "name": "Population",
+                    "value":234370202
+                }
+            ]
+        },
+        {
+            "race": "Black",
+            "crimes": [
+                {
+                    "name": "Aggravated Assault",
+                    "value": 128020
+                },
+                {
+                    "name": "Robbery",
+                    "value":49380
+                },
+                {
+                    "name": "Larceny",
+                    "value":245540
+                },
+                {
+                    "name": "Motor Vehicle Theft",
+                    "value": 23110
+                },
+                {
+                    "name": "Arson",
+                    "value": 2240
+                },
+                {
+                    "name": "Property Crime",
+                    "value": 320270
+                },
+                {
+                    "name": "Violent Crime",
+                    "value": 172980
+                },{
+                    "name": "Offenses",
+                    "value": 2667010
+                },{
+                    "name": "Population",
+                    "value":42000000
+                }
+            ]
+        },
+        {
+            "race": "American Indian",
+            "aggravatedAssault": 10100,
+            "robbery": 2500,
+            "larceny": 16070,
+            "motorVehicleTheft": 1710,
+            "arson": 170,
+            "propertyCrime": 20450,
+            "violentCrime": 11110,
+            "offenses": 2442000,
+            "population": 4000000
+        },
+        {
+            "race": "Asian",
+            "aggravatedAssault": 9200,
+            "robbery": 2630,
+            "larceny": 12070,
+            "motorVehicleTheft": 1320,
+            "arson": 240,
+            "propertyCrime": 16260,
+            "violentCrime": 10480,
+            "offenses": 159450,
+            "population": 18600000
+        }
+    ]
+}

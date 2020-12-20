@@ -2,6 +2,7 @@ const app = require("express")();
 const bodyParser = require("body-parser");
 const axios = require("axios");
 const cors = require('cors')
+const crimesByRace = require("./crimesByRace.json")
 
 app.use(cors())
 app.use(bodyParser.json());
@@ -25,6 +26,10 @@ app.get("/cmpd/offenses", (req, res) => {
       res.status(err.response.data.status).send({error: err.response.data.message})
     });
 });
+
+app.get("/crimesByRace", (req, res) => {
+  res.status(200).send(crimesByRace)
+})
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
