@@ -36,8 +36,8 @@ const setOffenses = async () => {
   }
 };
 
-// getCrimesByRace will retrieve all the crimes for corressponding races. 
-// this function is asynchronous so we can await the response of the HTTP request (API Call). 
+// getCrimesByRace will retrieve all the crimes for corressponding races.
+// this function is asynchronous so we can await the response of the HTTP request (API Call).
 // Using try/catch and async await allows us not to use callbacks and resolving promises with then/catch
 const getCrimesByRace = async () => {
   try {
@@ -66,28 +66,28 @@ setOffenses();
 
 // This will add an `input` event listener on the `crimes-by-race-select` element when the page first loads
 document.querySelector(".crimes-by-race-select").addEventListener("input", async (event) => {
-  // Get section element that has a class of `.crimes-by-race`
-  const crimesByRaceSection = document.querySelector(".crimes-by-race")
-  // If they switch the select element back to the default value, the crimes will disappear
-  if (event.target.value === "None") {
-    crimesByRaceSection.innerHTML = ""
-    return
-  }
+    // Get section element that has a class of `.crimes-by-race`
+    const crimesByRaceSection = document.querySelector(".crimes-by-race");
+    // If they switch the select element back to the default value, the crimes will disappear
+    if (event.target.value === "None") {
+      crimesByRaceSection.innerHTML = "";
+      return;
+    }
 
-  // Get all crimes from our API 
-  const crimesByRace = await getCrimesByRace()
+    // Get all crimes from our API
+    const crimesByRace = await getCrimesByRace();
 
-  // Loop through the `allCrimes` array and if we find a race that matches
-  // selected race in our select dropdown, populate the `crimes-by-race` section 
-  // with all the corressponding crimes
-  for (const crimeObject of crimesByRace.allCrimes) {
-    if (event.target.value === crimeObject.race) {
-      crimesByRaceSection.innerHTML = ""
+    // Loop through the `allCrimes` array and if we find a race that matches
+    // selected race in our select dropdown, populate the `crimes-by-race` section
+    // with all the corressponding crimes
+    for (const crimeObject of crimesByRace.allCrimes) {
+      if (event.target.value === crimeObject.race) {
+        crimesByRaceSection.innerHTML = "";
 
-      // Loop through our `crimes` array field and add each crime to our section element
-      for(const crime of crimeObject.crimes) {
-        setCrime(crime.name, crime.value)
+        // Loop through our `crimes` array field and add each crime to our section element
+        for (const crime of crimeObject.crimes) {
+          setCrime(crime.name, crime.value);
+        }
       }
     }
-  }
-})
+  });
